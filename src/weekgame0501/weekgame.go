@@ -1,6 +1,5 @@
 package weekgame0501
 
-import "strings"
 /*
 6047. 移除指定数字得到的最大结果 显示英文描述
 给你一个表示某个正整数的字符串 number 和一个字符 digit 。
@@ -14,17 +13,16 @@ import "strings"
 */
 
 func removeDigit(number string, digit byte) string {
-    removeIndex := -1
-    for index , ch := range number{
-        if byte(ch) != digit {
-            continue
-        }
-        if index < len(number) -1 && byte(number[index+1]) < digit {
-            removeIndex = index
-            break
-        }
-        removeIndex = index
-    }
-    return string(number[:removeIndex]) + string(number[removeIndex+1:])
+	removeIndex := -1
+	for index, ch := range number {
+		if byte(ch) != digit {
+			continue
+		}
+		if index < len(number)-1 && byte(number[index+1]) < digit {
+			removeIndex = index
+			break
+		}
+		removeIndex = index
+	}
+	return string(number[:removeIndex]) + string(number[removeIndex+1:])
 }
-
