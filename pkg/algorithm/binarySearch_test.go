@@ -29,7 +29,7 @@ func TestBinarySearch(t *testing.T) {
 	}
 	for _, tt := range tests {
 		got := BinarySearch(tt.args.nums, tt.args.target)
-		// 改写这里断言的方式即可
+		// 改写使用断言的方式
 		assert.Equal(t, tt.want, got)
 	}
 }
